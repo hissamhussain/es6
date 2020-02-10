@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <title>arrow functions introduction</title>
+    </head>
+    <body>
+        <script>
+            const name = ['wes','hissam','mik'];
+
+            const fullname = name.map(function(name){
+                return `${name} bos`;
+            })    
+
+            const fullname1 = name.map((name) => {
+                return `${name} boss`;
+            })
+
+            const fullname2 = name.map(name => {
+                return `${name} boss`;
+            })
+
+            console.log(fullname2)
+        </script>
+    </body>
+</html>

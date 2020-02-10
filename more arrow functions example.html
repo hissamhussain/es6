@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <title>More Arrow Functions</title>
+    </head>
+    <body>
+        <script>
+            const race = '100m Dash';
+            const winner = ['hissam','umer','hussain'];
+
+            const win = winner.map((winner,i) => ({name : winner,race,place:i+1}));
+            console.log(win);
+
+            const ages = [64,21,34,67,45,68,120];
+
+            const old = ages.filter(age => age>=60);
+
+            console.log(old);
+        </script>
+    </body>
+</html>

@@ -1,0 +1,57 @@
+<html>
+    <head>
+        <title>why not to use arrow function</title>
+    </head>
+
+    <body>
+        <style>
+        button
+        {
+            font-size: 100px;
+        }
+        .on
+        {
+            background: #ffc600;
+        }
+        </style>
+
+        <button id="pushy">Push me</button>
+        <script>
+            const button = document.querySelector('#pushy');
+            button.addEventListener('click',function(){
+                this.classList.toggle('on');
+            });
+
+            const person = {
+
+                points:23,
+                score:function(){
+                    this.points++;
+                }
+            }
+
+            class car {
+                constructor(make,color)
+                {
+                    this.make = make;
+                    this.color = color;
+                }
+            }
+
+            const beemer = new car('bmw','blue');
+            const subie =  new car('subaru','white');
+
+            car.prototype.summarize = function() {
+                return `This car is ${this.make} and color is ${this.color}`;
+            }
+
+            const orderChildren = function(){
+                const children = Array.from(arguments);
+                return children.map((child,i) => {
+                    return `${child} was child ${i+1}`;
+                })
+            }
+        </script>
+    </body>
+
+</html>
