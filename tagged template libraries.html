@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <title>Tagged template libraries</title>
+        <style>
+            .h1
+            {
+                background:aqua;
+            }
+        </style>
+    </head>
+    <body>
+        
+        <script>
+
+            function highlight(strings, ...values)
+            {
+                let str = '';
+                strings.forEach( (string,i) => {
+                    str += `${string} <span contenteditable class="h1">${values[i] || ''}</span>`;
+                    //str += string + (values[i] || '');
+                    
+                });
+                return str;
+            }
+
+            const name = 'hissam';
+            const age=24;
+            const sentence = highlight`${name} is ${age} years old`;
+            console.log(sentence);
+            document.body.innerHTML = sentence;
+        </script>
+    </body>
+</html>

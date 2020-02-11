@@ -1,0 +1,57 @@
+<html>
+    <head>
+        <title>Html fragments with literals</title>
+    </head>
+    <body>
+        <style>
+
+        </style>
+        <script>
+            const person =  {
+                name : 'Wes',
+                job: 'Web Developer',
+                city: 'Hamiltion',
+                bio : 'Wes is a really cool guy who loves to teach web development'
+
+            };
+            const show = `
+                <p> Name is ${person.name}<br>
+                    <span class='job'>job is ${person.job}</span><br>
+                    <span class='city'>city is ${person.city}</span> 
+                </p>
+            `;
+            
+           // document.body.innerHTML = show;
+                
+            const dogs = [
+                {name:'snickers',age:2},
+                {name:'hugo',age:3},
+                {name:'sunny',age:6}
+
+            ] ;
+
+            const show1 = `
+                <ul>
+                ${dogs.map(dog => `<li>${dog.name} is ${dog.age} years old.</li>`).join('')}
+                </ul>
+            `;   
+
+
+            const song = {
+                name : 'Dying to live',
+                artist : 'Tupac',
+                //featuring : 'Biggie smalls'
+            }
+
+            const show2 = `
+                <div class="song" >
+                    <h2>${song.name}</h2>
+                    <h3>${song.artist}</h3>
+                    ${song.featuring ? `<h4>${song.featuring}`:''}
+                </div>
+            `;
+            document.body.innerHTML = show2;
+            console.log(show1);
+        </script>
+    </body>
+</html>

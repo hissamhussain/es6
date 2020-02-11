@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <title>Tagged template exercise</title>
+    </head>
+    <body>
+        <script>
+
+
+            const dict = {
+                HTML:'Hyper text markup language',
+                CSS : 'Cascading style sheet',
+                JS : 'Javascript'
+            };
+
+            function abbreviate(strings, ...values)
+            {
+                 const abbreviated = values.map(value =>{
+                     if(dict[value])
+                     {
+                         return `<abbr title="${dict[value]}">${value}</abbr>`;
+                     }
+                     return value;
+                 }) 
+
+                 return strings.reduce((sentence,string,i) => {
+                     console.log(`sentence is ${sentence} string is ${string} and i is ${i}`);
+                    return `${sentence}${string}${abbreviated[i] || ''}`;
+                 },'')
+            }
+
+            const name = 'hissam'
+            const lname = 'hussain'
+            const sentence = abbreviate`my name is ${name} ${lname} and i love to code ${'HTML'},${'CSS'} and ${'JS'} `;
+            
+            document.body.innerHTML = sentence;
+
+        </script>
+    </body>
+</html>
