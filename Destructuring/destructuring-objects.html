@@ -1,0 +1,38 @@
+<heml>
+    <head>
+        <title>Destructring objects</title>
+    </head>
+    <body>
+        <script>
+            const person = {
+                name : 'Hissam',
+                last : 'Hussain',
+                degree : 'cs',
+                country :'Pakistan',
+                city : 'Karachi'
+            };
+
+            const {name , last , age =24} = person;
+
+            const hissam = {
+                first : 'Hissam',
+                last : 'Hussain',
+                links : {
+                    work: {
+                        github : 'github.com/hissamhussain',
+                        linkedin : 'linkedin.com/in/hissamhussain'
+                    },
+                    social : {
+                        facebook : 'facebook.com/hissamkhadim'
+                    }
+                }
+            }
+
+            const {github:git ,linkedin} = hissam.links.work;
+
+            const {facebook:fb} = hissam.links.social;
+
+            const {width = 100 ,height =200} = {width:500};
+        </script>
+    </body>
+</heml>

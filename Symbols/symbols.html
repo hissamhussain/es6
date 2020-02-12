@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title>Symbols</title>
+    </head>
+    <body>
+        <script>
+            //symbols used to avoid collision of same name and making individual entity
+            const classroom = {
+                [Symbol('mark')] : {age:80,gender:'male'},
+                [Symbol('olivia')] : {age:50,gender:'female'},
+                [Symbol('olivia')] : {age:50,gender:'female'}
+
+            }
+            for(person in classroom)
+            {
+                console.log(person);
+            }
+            const syms = Object.getOwnPropertySymbols(classroom);
+            console.log(syms);
+            syms.map(sym => console.log(classroom[sym]));
+        </script>
+    </body>
+</html>

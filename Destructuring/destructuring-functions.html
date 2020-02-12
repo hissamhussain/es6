@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <title>Destructuring Functions</title>
+    </head>
+    <body>
+        <script>
+            function convertCurrency(amount)
+            {
+                const converted = {
+                    USD : amount * 0.76,
+                    GPB : amount * 0.53,
+                    AUD : amount * 1.01,
+                    MEX : amount * 13.30
+
+                };
+                return converted;
+            }
+
+            const {USD,AUD,GPB,MEX} = convertCurrency(100);
+            console.log(USD,AUD,GPB,MEX);
+
+            function tipcalc({total=100,tip=0.15,tax=0.13} = {})
+            {
+                return total + (total * tip) + (total * tax);
+            }
+
+            console.log(tipcalc({tax:0.3,total:100,tip:0.2}));
+        </script>
+    </body>
+</html>

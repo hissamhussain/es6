@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <title>Destructing arrays</title>
+    </head>
+    <body>
+        <script>
+            const details = ['hissam',123,'hissamhussain'];
+            const [name,num,fullname] = details;
+
+            const data = 'basketball,sports,22,12';
+            const [sport,category,sku,inven] = data.split(',');
+
+            const game = ['hissam','usman','aaqib','hamza','faraz'];
+            const [ ,,cap,,] = game;
+
+            console.log(sport,category,sku,inven);
+        </script>
+    </body>
+</html>

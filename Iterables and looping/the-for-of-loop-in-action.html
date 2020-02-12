@@ -1,0 +1,58 @@
+<html>
+    <head>
+        <title>For of loop in action</title>
+    </head>
+    <body>
+        <p>Hi i am p 01</p>
+        <p>Hi i am p 02</p>
+        <p>Hi i am p 03</p>
+        <p>Hi i am p 04</p>
+        <p>Hi i am p 05</p>
+        <p>Hi i am p 06</p>
+        <p>Hi i am p 07</p>
+        <p>Hi i am p 08</p>
+        <p>Hi i am p 09</p>
+        <p>Hi i am p 10</p>
+        
+
+        <script>
+            const meat = ['buffalo','cow','camel','chicken'];
+            
+            //displaying iterator along with name
+
+            for(const [i,m] of meat.entries())
+            {
+                console.log(`${m} is the ${i+1} item`);
+            }
+
+            //for of loop also works with unknown number of arguments
+
+            function add()
+            {
+                let total=0;
+                for(const i of arguments)
+                {
+                    total+=i;
+                }
+                return total;
+            }
+
+            console.log(add(1,2,3,4,5,6,7,8,9));
+
+            const name = 'hissam hussain';
+
+            for(const i of name)
+            {
+                console.log(i);
+            }
+
+            const p =document.querySelectorAll('p');
+            for(const i of p)
+            {
+                i.addEventListener("click",function(){
+                    console.log(this.textContent);
+                })
+            }
+        </script>
+    </body>
+</html>

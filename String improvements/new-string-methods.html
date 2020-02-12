@@ -1,0 +1,47 @@
+<html>
+    <head>
+        <title>New String methods</title>
+    </head>
+    <body>
+        <script>
+            const course = 'RFB2';
+            const flightnumber = '20-AC2018-jz';
+            const accountnumber = '825242631RT0001';
+
+            const make = 'BMW';
+            const model = 'x5';
+            const colour = 'Royal Blue';
+
+
+            //.startsWith()
+
+            console.log(course.startsWith('RFB'));
+            console.log(flightnumber.startsWith('AC',3));
+            console.log(accountnumber.startsWith('RT',9));
+
+            //.endsWith()
+
+            console.log(course.endsWith('2'));
+            console.log(accountnumber.endsWith('RT',11));
+            console.log(flightnumber.endsWith('jz'));
+
+            //.includes()
+
+            console.log(flightnumber.includes('AC'));
+            console.log(accountnumber.includes('RT'));
+            
+
+
+            //.repeat()
+            
+            function leftpad(string,length=20)
+            {
+                return `${' '.repeat(length - string.length)}${string}`;
+            }
+            console.log(leftpad(make));
+            console.log(leftpad(model));
+            console.log(leftpad(colour));
+
+        </script>
+    </body>
+</html>

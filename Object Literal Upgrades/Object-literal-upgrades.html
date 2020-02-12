@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <title>Object literal Upgrades</title>
+    </head>
+    <body>
+        <script>
+            const first='Hissam';
+            const last = 'hussain';
+            const age = 23;
+            const city = 'karachi';
+
+            const person = {
+                first,
+                last,
+                age,
+                city
+            }
+            console.log(person);
+
+            const keys = ['size','color','weight'];
+            const values = ['medium','red',100];
+
+            const a = {
+                [keys.shift()] : [values.shift()],
+                [keys.shift()] : [values.shift()],
+                [keys.shift()] : [values.shift()]
+
+            }
+            console.log(a);
+        </script>
+    </body>
+</html>
