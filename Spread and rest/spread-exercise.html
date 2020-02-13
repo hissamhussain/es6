@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <title>Spread Exercise</title>
+        <style>
+            .jump
+            {
+                font-size: 50px;
+                color: aqua;    
+            }
+            span:hover
+            {
+                display: inline-block;
+                transform: translateY(-8px) rotate(10deg) scale(2);
+            }
+        </style>
+    </head>
+    <body>
+        
+        <h2 class="jump" >SPREADS!</h2>
+        <script>
+            let spread = document.querySelector('.jump');
+            let spr = [...spread.textContent];
+            spr = spr.map(str => `<span>${str}</span>`).join('');    
+            console.log(spr);
+            spread.innerHTML = spr;
+
+            
+
+        </script>
+    </body>
+</html>

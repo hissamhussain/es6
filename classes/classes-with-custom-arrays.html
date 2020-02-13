@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <title>Classes with custom arrays</title>
+    </head>
+    <body>
+        <script>
+            class moviesCollection extends Array
+            {
+                constructor(name,...items)
+                {
+                    super(...items)
+                    this.name=name;
+                    
+                }
+                add(movie)
+                {
+                    this.push(movie)
+                    
+                }
+
+                topRated(limit =2)
+                {
+                    return this.sort((a,b) => a.stars>b.stars ? -1:1).slice(0,limit)
+                }
+            }
+
+            const movies = new moviesCollection('Hissam\'s movies list',
+            {name:'3idiots',stars:9.5},
+            {name:'chichorre',stars:9},
+            {name:'star wars',stars:8},
+            {name:'justice league',stars:5}
+            )
+
+            movies.add({name:'Harry Potter',stars:10});
+        </script>
+    </body>
+</html>

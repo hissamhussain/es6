@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <title>classes with super</title>
+    </head>
+    <body>
+        <script>
+            class animal
+            {
+                constructor(name)
+                {
+                    this.name = name;
+                    this.thirst = 100;
+                    this.belly = [];
+                }
+
+                drink()
+                {
+                    this.thirst-=10;
+                    return this.thirst;
+                }
+
+                eat(item)
+                {
+                    this.belly.push(item);
+                    return this.belly;
+                }
+            }
+
+            class dog extends animal
+            {
+                constructor(name,breed)
+                {
+                    super(name);
+                    this.breed = breed;
+                }
+            }
+
+            const sunny = new animal('sunny');
+            const snickers = new dog('snickers','golden')
+        </script>
+    </body>
+</html>

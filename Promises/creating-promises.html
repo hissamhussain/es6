@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <title>Creating promises</title>
+    </head>
+    <body>
+        <script>
+            const p = new Promise((resolve,reject) => {
+                
+                if(3>2)
+                    resolve('hissam is cool');
+                else
+                    reject('Hissam is not cool');
+            })
+
+            p
+                .then(data => console.log(data))
+                .catch(err => console.log(err));
+        </script>
+    </body>
+</html>

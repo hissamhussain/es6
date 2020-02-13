@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title>Spreading into a function</title>
+    </head>
+    <body>
+        <script>
+            const inventory = ['a','b','c'];
+            const newinventory= ['d','e'];
+
+            inventory.push(...newinventory);
+
+            function sayhi(first,last)
+            {
+                alert(`Hey there ${first}${last}`);
+            }
+            const name = ['hissam','hussain'];
+            sayhi(...name);
+            
+
+            console.log(inventory);
+        </script>
+    </body>
+</html>

@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <title>Rest parameters </title>
+    </head>
+    <body>
+        <script>
+            function convertCurrency(rate , ...amount)
+            {
+               return amount.map(a => rate * a);
+            }
+           const amounts = convertCurrency(1.5,10,12,34,23,45,23);
+           console.log(amounts)
+
+           const array = ['hissam','hussain',23,'8','8.1','7.9'];
+
+           [first,last,age,...workhours] = array;
+           console.log(first,last,age,workhours)
+        </script>
+    </body>
+</html>

@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title>Multiple Promises</title>
+    </head>
+    <body>
+        <script>
+            const p1 = new Promise((resolve) =>{
+                resolve({temp:29,condition:'Sunny with clouds'});
+            })
+
+            const p2 = new Promise((resolve) => {
+                resolve(['i like cakes','i love coding']);
+            })
+
+            Promise
+            .all([p1,p2])
+            .then(Response => {
+                const [weather,tweet] = Response
+                console.log(weather,tweet);
+            })
+        </script>
+    </body>
+</html>

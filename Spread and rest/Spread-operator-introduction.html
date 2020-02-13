@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <title>Spread operator introduction</title>
+    </head>
+    <body>
+        <script>
+            const featured = ['Deep Dish','Tikka','Creamy'];
+            const speciality = ['Meatzza','Spicy Mama','Margherita'];
+
+            //spread operator is used instead of concat to either copy an array or to concat two array 
+            //along with additions
+
+            /* let pizzas = [];
+            pizzas = pizzas.concat(featured);
+            pizzas.push('Veg');
+            pizzas = pizzas.concat(speciality); */
+            
+            //instead of this we use spread operator
+
+            const pizzas = [...featured,'veg',...speciality];
+
+            console.log(pizzas);
+
+            //fridaypizzas = pizzas;
+
+            //by using the above line if we do changes in fridaypizza ,pizzas is changed too so 
+            //to avoid that we use spread operator
+
+            let fridaypizza = [...pizzas];
+
+            console.log(fridaypizza)
+
+            const deepDish = {
+                pizzaName : 'Deep Dish',
+                size : 'Medium',
+                ingredients : ['Marinara','Italian Sausage','Dough','Cheese']
+            }
+        </script>
+    </body>
+</html>
