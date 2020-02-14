@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <title>Looping generators with for of loop</title>
+    </head>
+    <body>
+        <script>
+            function* data()
+            {
+
+                yield 'hi';
+                yield 'hi2';                
+                yield 'hi3';                
+                yield 'hi4';                
+                yield 'hi5';                
+                yield 'hi6';                
+            }
+
+            const d = data();
+            for(const a of d)
+            {
+               console.log(a);
+            }
+        </script>
+    </body>
+</html>

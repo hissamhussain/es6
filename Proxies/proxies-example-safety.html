@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <title>Proxies safety example</title>
+    </head>
+    <body>
+        <script>
+            const safeHandler = {
+                set(target,name,value)
+                {
+                    const likekey = Object.keys(target).find(k => k.toLowerCase() === name.toLowerCase());
+
+                    if(!(name in target) && likekey)
+                    {
+                        console.log('reaching')
+                        throw new Error(`Oops ... we have that attribute ${name} but with name ${likekey}`);
+                    }
+                    target[name] = value;
+                },
+                get(target,name)
+                {
+                    return target[name];
+                }
+                
+            }
+
+            const safe = new Proxy({id:123},safeHandler);
+
+            safe.ID = 200;
+        </script>
+    </body>
+</html>

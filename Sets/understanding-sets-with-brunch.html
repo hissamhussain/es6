@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <title>Understanding sets with brunch</title>
+    </head>
+    <body>
+        <script>
+            const brunch = new Set();
+            brunch.add('Hissam');
+            brunch.add('Hussain');
+            brunch.add('Umer');
+
+            const line = brunch.values();
+            console.log(line.next().value);
+            console.log(line.next().value);
+            brunch.add('aaqib');
+            brunch.add('hamza');
+            console.log(line.next().value);
+        </script>
+    </body>
+</html>

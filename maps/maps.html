@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <title>Maps</title>
+    </head>
+    <body>
+        <script>
+            const dogs = new Map();
+            dogs.set(1,'snickers');
+            dogs.set(2,'umer');
+
+            dogs.forEach((key,val) => console.log(key,val))
+
+            for([key,val] of dogs)
+            {
+                console.log(key,val);
+            }
+
+            console.log(dogs);
+        </script>
+    </body>
+</html>

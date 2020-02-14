@@ -1,0 +1,50 @@
+<html>
+    <head>
+        <title>Generators</title>
+    </head>
+    <body>
+        <script>
+            /* function listPeople()
+            {
+                console.log('Hissam');
+                console.log('Hussain');
+                console.log('umer');
+            } */
+
+           /*  function* listPeople()
+            {
+                yield 'Hissam';
+                yield 'hussain';
+                yield 'umer';
+            } */
+
+            /* function* listPeople()
+            {
+                let i = 0;
+                yield i;
+                i++;
+                yield i;
+                i++
+                yield i;
+            }
+
+            const people = listPeople(); */
+
+            const inventors = [
+                {name:'hissam',last:'hussain',year:1897},
+                {name:'umer',last:'sheikh',year:1999},
+                {name:'usman',last:'soomro',year:1996},
+                {name:'hamza',last:'shoukat',year:1996},
+            ]
+            function* pass (arr)
+            {
+                for(a of arr)
+                {
+                    yield a;
+                    
+                }
+            }
+            const inventor = pass(inventors);
+        </script>
+    </body>
+</html>

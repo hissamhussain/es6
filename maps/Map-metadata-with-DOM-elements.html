@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <title>Map Metadata with DOM elements</title>
+    </head>
+    <body>
+        <button>Hissam</button>
+        <button>Umer</button>
+        <button>Hussain</button>
+        <button>Aaqib</button>
+        <button>usman</button>
+
+
+        <script>
+            const clickCounts = new Map();
+
+            const buttons = document.querySelectorAll('button');
+
+            buttons.forEach(button =>{
+                clickCounts.set(button,0);
+                button.addEventListener('click',function() {
+                    console.log(this);
+                    
+                    var val = clickCounts.get(this);
+                    clickCounts.set(this,val+1);
+                    console.log(clickCounts)    
+                })
+            })
+   
+        </script>
+    </body>
+</html>

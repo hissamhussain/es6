@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <title>Weaksets</title>
+    </head>
+    <body>
+        <script>
+
+            //weakset cannot store anything except objects
+            //weakset can not use Clear()
+            let dog1 = {name:'Snicker',age:3};
+            
+            const ss = new WeakSet([dog1]);
+            
+            
+            console.log(ss);
+        </script>
+    </body>
+</html>
