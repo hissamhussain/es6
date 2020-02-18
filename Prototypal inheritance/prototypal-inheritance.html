@@ -1,0 +1,21 @@
+<htmL>
+    <head>
+        <title>Prototypal inheritance</title>
+    </head>
+    <body>
+        <script>
+            function Dog(name,breed)
+            {
+                this.name = name;
+                this.breed = breed;
+            }
+
+            Dog.prototype.bark = function()
+            {
+                console.log(`Bark Bark !! my name is ${this.name} from breed ${this.breed}`)
+            }
+
+            const snickers = new Dog('Doggy','DOG');
+        </script>
+    </body>
+</htmL>
